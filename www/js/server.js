@@ -22,6 +22,10 @@ define([
     'game'
 ], function(WinEvaluation, Connect4Game) {
 
+    Plynd.ServerFunctions.hello = function(data, success, error) {
+        success({'hello':'Cachan'});
+    };
+
     Plynd.ServerFunctions.initializeGame = function(data, success, error) {
         var state = {};
         for (var i = 0; i < 7 ; i++) {
